@@ -5,7 +5,35 @@
   </header>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
+    <h3>Thank you for your order!</h3>
+    <p> Here's are the item(s) you ordered! </p>
+    <% @order.line_items.each do |item| %>
+      <article>
+        <span>
+          ( <%= item.quantity %> )
+        </span>
+        <%= image_tag item.product.image.tiny %>
+        <h4>
+          <%= item.product.name %>
+        </h4>
+        <%= item.product.description %>
+        <%= humanized_money_with_symbol item.item_price %> per item.
+
+      </article>
+    <% end %>
+      <div class="text-info">
+        <br>
+        <h4> 
+          Total: <%= humanized_money_with_symbol (@order.total) %> 
+        </h4>
+        <h4>
+          An E-mail with the order details will be sent to : <%= @order.email %>
+        </h4>
+        <h4>
+          Thank you for your purchase!
+        </h4>
+      </div>
+
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
