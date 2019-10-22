@@ -63,5 +63,9 @@ RSpec.describe User, type: :model do
       User.create!(first_name: "Tom2", last_name:"Bog2", email: "TomBog@123456.com", password: "12345", password_confirmation: "12345")
       expect(User.authenticate_with_credentials("TOMBOG@123456.com", "12345")).to_not eq(nil)
     end
+    it 'should still log in if there are spaces within the email' do
+      User.create!(first_name: "Tom2", last_name:"Bog2", email: "TomBog@123456.com", password: "12345", password_confirmation: "12345")
+      expect(User.authenticate_with_credentials("TOMBOG@123456.com   ", "12345")).to_not eq(nil)
+    end
   end
 end
