@@ -24,14 +24,6 @@ RSpec.feature "Visitor navigates to Details page", type: :feature, js: true do
 
     # first(:xpath, "//a[@href='/products/1']").click
 
-
-
-
-
-
-    # commented out b/c it's for debugging only
-    save_and_open_screenshot
-
     expect(page).to have_css('.products-show')
     # expect(page).to have_css 'section.products-show', :visible => false
 
