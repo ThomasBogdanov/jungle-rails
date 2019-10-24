@@ -4,11 +4,11 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 I inherited this code base and solved ticket-styled assignments to both fix bugs and impliment new features.
 The implimented code is tested with Rspec. 
 
-# Website Demo
+# Website Demo 
 
 - The Jungle Home Page:
 !["Home Page!"](https://github.com/ThomasBogdanov/jungle-rails/blob/master/public/images/JungleHome.png?raw=true)
-- Admin Panel with Login :
+- Admin Panel with Login (Login panel not shown in recording) :
 !["Admin Panel!"](https://github.com/ThomasBogdanov/jungle-rails/blob/master/public/gifs/AdminPanel.gif?raw=true)
 - After you've completed your order!:
 !["Order complete!"](https://github.com/ThomasBogdanov/jungle-rails/blob/master/public/images/CompletedOrder.png?raw=true)
